@@ -1,5 +1,8 @@
 var THREE = {
   "REVISION": {},
+  "log": function () {},
+  "warn": function () {},
+  "error": function () {},
   "MOUSE": {
     "LEFT": {},
     "MIDDLE": {},
@@ -70,6 +73,7 @@ var THREE = {
   "IntType": {},
   "UnsignedIntType": {},
   "FloatType": {},
+  "HalfFloatType": {},
   "UnsignedShort4444Type": {},
   "UnsignedShort5551Type": {},
   "UnsignedShort565Type": {},
@@ -266,7 +270,8 @@ var THREE = {
     "randFloatSpread": function () {},
     "degToRad": function () {},
     "radToDeg": function () {},
-    "isPowerOfTwo": function () {}
+    "isPowerOfTwo": function () {},
+    "nextPowerOfTwo": function () {}
   },
   "Spline": function () {},
   "Triangle": function () {},
@@ -287,6 +292,7 @@ var THREE = {
   "Uint32Attribute": function () {},
   "Float32Attribute": function () {},
   "Float64Attribute": function () {},
+  "DynamicBufferAttribute": function () {},
   "BufferGeometry": function () {},
   "Geometry": function () {},
   "GeometryIdCount": {},
@@ -301,7 +307,13 @@ var THREE = {
   "HemisphereLight": function () {},
   "PointLight": function () {},
   "SpotLight": function () {},
-  "Cache": function () {},
+  "Cache": {
+    "files": function () {},
+    "add": function () {},
+    "get": function () {},
+    "remove": function () {},
+    "clear": function () {}
+  },
   "Loader": function () {},
   "XHRLoader": function () {},
   "ImageLoader": function () {},
@@ -362,6 +374,7 @@ var THREE = {
   "Fog": function () {},
   "FogExp2": function () {},
   "ShaderChunk": {
+    "common": {},
     "alphatest_fragment": {},
     "lights_lambert_vertex": {},
     "map_particle_pars_fragment": {},
@@ -483,6 +496,7 @@ var THREE = {
           "addScalar": function () {},
           "addVectors": function () {},
           "sub": function () {},
+          "subScalar": function () {},
           "subVectors": function () {},
           "multiplyScalar": function () {},
           "applyMatrix4": function () {},
@@ -505,6 +519,7 @@ var THREE = {
           "normalize": function () {},
           "setLength": function () {},
           "lerp": function () {},
+          "lerpVectors": function () {},
           "equals": function () {},
           "fromArray": function () {},
           "toArray": function () {},
@@ -573,9 +588,10 @@ var THREE = {
           "getComponent": function () {},
           "copy": function () {},
           "add": function () {},
-          "addVectors": function () {},
           "addScalar": function () {},
+          "addVectors": function () {},
           "sub": function () {},
+          "subScalar": function () {},
           "subVectors": function () {},
           "multiply": function () {},
           "multiplyScalar": function () {},
@@ -598,6 +614,7 @@ var THREE = {
           "distanceToSquared": function () {},
           "setLength": function () {},
           "lerp": function () {},
+          "lerpVectors": function () {},
           "equals": function () {},
           "fromArray": function () {},
           "toArray": function () {},
@@ -691,6 +708,10 @@ var THREE = {
         "type": {},
         "value": function () {}
       },
+      "pointLightDecay": {
+        "type": {},
+        "value": function () {}
+      },
       "spotLightColor": {
         "type": {},
         "value": function () {}
@@ -712,6 +733,10 @@ var THREE = {
         "value": function () {}
       },
       "spotLightExponent": {
+        "type": {},
+        "value": function () {}
+      },
+      "spotLightDecay": {
         "type": {},
         "value": function () {}
       }
@@ -766,6 +791,57 @@ var THREE = {
       "map": {
         "type": {},
         "value": function () {}
+      },
+      "offsetRepeat": {
+        "type": {},
+        "value": {
+          "x": {},
+          "y": {},
+          "z": {},
+          "w": {},
+          "constructor": function () {},
+          "set": function () {},
+          "setX": function () {},
+          "setY": function () {},
+          "setZ": function () {},
+          "setW": function () {},
+          "setComponent": function () {},
+          "getComponent": function () {},
+          "copy": function () {},
+          "add": function () {},
+          "addScalar": function () {},
+          "addVectors": function () {},
+          "sub": function () {},
+          "subScalar": function () {},
+          "subVectors": function () {},
+          "multiplyScalar": function () {},
+          "applyMatrix4": function () {},
+          "divideScalar": function () {},
+          "setAxisAngleFromQuaternion": function () {},
+          "setAxisAngleFromRotationMatrix": function () {},
+          "min": function () {},
+          "max": function () {},
+          "clamp": function () {},
+          "clampScalar": function () {},
+          "floor": function () {},
+          "ceil": function () {},
+          "round": function () {},
+          "roundToZero": function () {},
+          "negate": function () {},
+          "dot": function () {},
+          "lengthSq": function () {},
+          "length": function () {},
+          "lengthManhattan": function () {},
+          "normalize": function () {},
+          "setLength": function () {},
+          "lerp": function () {},
+          "lerpVectors": function () {},
+          "equals": function () {},
+          "fromArray": function () {},
+          "toArray": function () {},
+          "fromAttribute": function () {},
+          "clone": function () {}
+        }
       },
       "fogDensity": {
         "type": {},
@@ -902,6 +978,7 @@ var THREE = {
             "addScalar": function () {},
             "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiplyScalar": function () {},
             "applyMatrix4": function () {},
@@ -924,6 +1001,7 @@ var THREE = {
             "normalize": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "equals": function () {},
             "fromArray": function () {},
             "toArray": function () {},
@@ -1097,6 +1175,7 @@ var THREE = {
             "addScalar": function () {},
             "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiplyScalar": function () {},
             "applyMatrix4": function () {},
@@ -1119,6 +1198,7 @@ var THREE = {
             "normalize": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "equals": function () {},
             "fromArray": function () {},
             "toArray": function () {},
@@ -1240,6 +1320,10 @@ var THREE = {
           "type": {},
           "value": function () {}
         },
+        "pointLightDecay": {
+          "type": {},
+          "value": function () {}
+        },
         "spotLightColor": {
           "type": {},
           "value": function () {}
@@ -1264,6 +1348,10 @@ var THREE = {
           "type": {},
           "value": function () {}
         },
+        "spotLightDecay": {
+          "type": {},
+          "value": function () {}
+        },
         "shadowMap": {
           "type": {},
           "value": function () {}
@@ -1283,40 +1371,6 @@ var THREE = {
         "shadowMatrix": {
           "type": {},
           "value": function () {}
-        },
-        "ambient": {
-          "type": {},
-          "value": {
-            "r": {},
-            "g": {},
-            "b": {},
-            "constructor": function () {},
-            "set": function () {},
-            "setHex": function () {},
-            "setRGB": function () {},
-            "setHSL": function () {},
-            "setStyle": function () {},
-            "copy": function () {},
-            "copyGammaToLinear": function () {},
-            "copyLinearToGamma": function () {},
-            "convertGammaToLinear": function () {},
-            "convertLinearToGamma": function () {},
-            "getHex": function () {},
-            "getHexString": function () {},
-            "getHSL": function () {},
-            "getStyle": function () {},
-            "offsetHSL": function () {},
-            "add": function () {},
-            "addColors": function () {},
-            "addScalar": function () {},
-            "multiply": function () {},
-            "multiplyScalar": function () {},
-            "lerp": function () {},
-            "equals": function () {},
-            "fromArray": function () {},
-            "toArray": function () {},
-            "clone": function () {}
-          }
         },
         "emissive": {
           "type": {},
@@ -1370,6 +1424,7 @@ var THREE = {
             "addScalar": function () {},
             "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiply": function () {},
             "multiplyScalar": function () {},
@@ -1401,6 +1456,7 @@ var THREE = {
             "normalize": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "cross": function () {},
             "crossVectors": function () {},
             "projectOnVector": function () {},
@@ -1492,6 +1548,7 @@ var THREE = {
             "addScalar": function () {},
             "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiplyScalar": function () {},
             "applyMatrix4": function () {},
@@ -1514,6 +1571,7 @@ var THREE = {
             "normalize": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "equals": function () {},
             "fromArray": function () {},
             "toArray": function () {},
@@ -1578,9 +1636,10 @@ var THREE = {
             "getComponent": function () {},
             "copy": function () {},
             "add": function () {},
-            "addVectors": function () {},
             "addScalar": function () {},
+            "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiply": function () {},
             "multiplyScalar": function () {},
@@ -1603,6 +1662,7 @@ var THREE = {
             "distanceToSquared": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "equals": function () {},
             "fromArray": function () {},
             "toArray": function () {},
@@ -1692,6 +1752,10 @@ var THREE = {
           "type": {},
           "value": function () {}
         },
+        "pointLightDecay": {
+          "type": {},
+          "value": function () {}
+        },
         "spotLightColor": {
           "type": {},
           "value": function () {}
@@ -1716,6 +1780,10 @@ var THREE = {
           "type": {},
           "value": function () {}
         },
+        "spotLightDecay": {
+          "type": {},
+          "value": function () {}
+        },
         "shadowMap": {
           "type": {},
           "value": function () {}
@@ -1735,40 +1803,6 @@ var THREE = {
         "shadowMatrix": {
           "type": {},
           "value": function () {}
-        },
-        "ambient": {
-          "type": {},
-          "value": {
-            "r": {},
-            "g": {},
-            "b": {},
-            "constructor": function () {},
-            "set": function () {},
-            "setHex": function () {},
-            "setRGB": function () {},
-            "setHSL": function () {},
-            "setStyle": function () {},
-            "copy": function () {},
-            "copyGammaToLinear": function () {},
-            "copyLinearToGamma": function () {},
-            "convertGammaToLinear": function () {},
-            "convertLinearToGamma": function () {},
-            "getHex": function () {},
-            "getHexString": function () {},
-            "getHSL": function () {},
-            "getStyle": function () {},
-            "offsetHSL": function () {},
-            "add": function () {},
-            "addColors": function () {},
-            "addScalar": function () {},
-            "multiply": function () {},
-            "multiplyScalar": function () {},
-            "lerp": function () {},
-            "equals": function () {},
-            "fromArray": function () {},
-            "toArray": function () {},
-            "clone": function () {}
-          }
         },
         "emissive": {
           "type": {},
@@ -1860,6 +1894,7 @@ var THREE = {
             "addScalar": function () {},
             "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiply": function () {},
             "multiplyScalar": function () {},
@@ -1891,6 +1926,7 @@ var THREE = {
             "normalize": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "cross": function () {},
             "crossVectors": function () {},
             "projectOnVector": function () {},
@@ -1969,6 +2005,57 @@ var THREE = {
         "map": {
           "type": {},
           "value": function () {}
+        },
+        "offsetRepeat": {
+          "type": {},
+          "value": {
+            "x": {},
+            "y": {},
+            "z": {},
+            "w": {},
+            "constructor": function () {},
+            "set": function () {},
+            "setX": function () {},
+            "setY": function () {},
+            "setZ": function () {},
+            "setW": function () {},
+            "setComponent": function () {},
+            "getComponent": function () {},
+            "copy": function () {},
+            "add": function () {},
+            "addScalar": function () {},
+            "addVectors": function () {},
+            "sub": function () {},
+            "subScalar": function () {},
+            "subVectors": function () {},
+            "multiplyScalar": function () {},
+            "applyMatrix4": function () {},
+            "divideScalar": function () {},
+            "setAxisAngleFromQuaternion": function () {},
+            "setAxisAngleFromRotationMatrix": function () {},
+            "min": function () {},
+            "max": function () {},
+            "clamp": function () {},
+            "clampScalar": function () {},
+            "floor": function () {},
+            "ceil": function () {},
+            "round": function () {},
+            "roundToZero": function () {},
+            "negate": function () {},
+            "dot": function () {},
+            "lengthSq": function () {},
+            "length": function () {},
+            "lengthManhattan": function () {},
+            "normalize": function () {},
+            "setLength": function () {},
+            "lerp": function () {},
+            "lerpVectors": function () {},
+            "equals": function () {},
+            "fromArray": function () {},
+            "toArray": function () {},
+            "fromAttribute": function () {},
+            "clone": function () {}
+          }
         },
         "fogDensity": {
           "type": {},
@@ -2104,6 +2191,7 @@ var THREE = {
             "addScalar": function () {},
             "addVectors": function () {},
             "sub": function () {},
+            "subScalar": function () {},
             "subVectors": function () {},
             "multiplyScalar": function () {},
             "applyMatrix4": function () {},
@@ -2126,6 +2214,7 @@ var THREE = {
             "normalize": function () {},
             "setLength": function () {},
             "lerp": function () {},
+            "lerpVectors": function () {},
             "equals": function () {},
             "fromArray": function () {},
             "toArray": function () {},
@@ -2295,6 +2384,7 @@ var THREE = {
   "WebGLExtensions": function () {},
   "WebGLProgram": function () {},
   "WebGLShader": function () {},
+  "WebGLState": function () {},
   "LensFlarePlugin": function () {},
   "ShadowMapPlugin": function () {},
   "SpritePlugin": function () {},
@@ -2417,4 +2507,4 @@ var THREE = {
   "WireframeHelper": function () {},
   "ImmediateRenderObject": function () {},
   "MorphBlendMesh": function () {}
-};
+}
